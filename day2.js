@@ -33,3 +33,17 @@ if (nilai >= 90) {
 } else {
   console.log("Grade D");
 }
+
+//  example 2
+
+let beratBadan = 60
+let tinggiBadan = 190 / 100
+
+let bmi = beratBadan / (tinggiBadan **2);
+console.log("score" ,  bmi ); 
+
+if (bmi < 18,5 ) {
+  console.log("underweight");
+} else if (bmi >= 30) {
+  console.log("Obes");
+}
