@@ -1,4 +1,10 @@
 /* 
+Step masukan ke git
+
+1. git add .
+2. git commit -m "add: new learning fundamental"
+3. git push origin dev
+
 Else if condition : digunakan saat ada dua atau lebih kondisi 
  example : */
 let nilai = 60;
