@@ -60,6 +60,24 @@ if ((makan == " bebek " &&  minum == "soda") || lokasi == "SMG"){
 
 let parfum = "timteng"
 
-if (!(parfum == "lokal")){
-  console.log("gunakan lokal");
+if (parfum !== "indo"){ 
+  console.log("gunakan indo");
 }
+
+// switch case condition : digunakan untuk membandingkan satu variabel dengan beberapa kemungkinan nilai.
+
+let mobil = "brio";
+
+  switch(mobil){
+    case "hrv":
+    console.log ("honda");
+    break;
+    case "fortuner":
+        console.log ("toyota");
+    break;
+    case "BMW":
+        console.log ("BMW");
+    break;
+default:
+    console.log ("ini bukan mobil");
+  }
