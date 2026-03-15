@@ -4,6 +4,12 @@ Step masukan ke git
 1. git add .
 2. git commit -m "add: new learning fundamental"
 3. git push origin dev
+
+untuk update 
+1. git add .
+2. git commit -m "update project"
+3. git push origin dev
+
 */ 
 
 // if and else condition :
@@ -66,7 +72,7 @@ if (parfum !== "indo"){
 
 // switch case condition : digunakan untuk membandingkan satu variabel dengan beberapa kemungkinan nilai.
 
-let mobil = "brio";
+let mobil = "fortuner";
 
   switch(mobil){
     case "hrv":

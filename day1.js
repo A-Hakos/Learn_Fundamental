@@ -118,4 +118,11 @@ console.log(++pre, 'ini adalah prefix'); // nilai sudah ditambah satu
 let post=5;
 console.log(post++, "ini adalah postfix");
 
+// String template : digunakan untuk menyisipkan variabel atau ekspresi ke dalam string.
 
+let Fname = "aditya";
+let Mname = "hakos"; 
+let Lname = "peris";
+let fullname = `Name : ${Fname} ${Mname} ${Lname}`;
+
+console.log(fullname);
