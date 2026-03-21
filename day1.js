@@ -57,6 +57,21 @@ data dimulai dari hitungan 0,1,2,3,....,dst
 console.log(mobil); // memanggil semua data di variable mobil
 console.log(mobil[5]); // memanggil data [5]
 
+// Cara menghitung jumlah array
+console.log(mobil.length); // cara menghitung jumlah array
+
+// Menambahkan Data Array
+mobil.push ("Mazda"); // tipe data yang dimasukan tidak terbatas (string, number, dll)
+console.table(mobil);
+
+// Cara mengubah Data di Array
+mobil[0] = "Honda"; // mengubah data array index ke 0 "Brio" ke "Honda"
+console.table(mobil);
+
+// Cara menambahkan Data Array ke Index ke 0
+mobil.unshift("Mercy"); // digunakan untuk push data ke array index 0
+console.table(mobil);
+
 /* OPERATOR
 + :	Untuk penambahan
 example : 
@@ -126,3 +141,76 @@ let Lname = "peris";
 let fullname = `Name : ${Fname} ${Mname} ${Lname}`;
 
 console.log(fullname);
+
+// multiline : menggunakan backtik `` digunakan untuk pemanggilan dengan beda barisnya 
+
+  let multiline = ` Content Moderator Specialis
+  Japanese Language 
+  English`;
+
+  console.log(multiline);
+
+  // KONVERSI STRING DAN NUMBER
+
+  const val1 = "1"; // type data string 
+  const val2 = 2 // type data number 
+  const hasil = val1 + val2 ; 
+
+  console.log(hasil); // hasil akan menjadi 12 karena bukan hasil dari penjumlahan
+
+        // parseInt (string) : konversi dari string ke number (bilangan bulat)
+        // parseFloat (string) :  konversi dari string ke number (bilangan pecahan)
+        // Number (string) : konversi dari string ke number (bilangan pecahan atau pecahan)
+        // .toString() : konversi dari number ke string 
+
+                // parseInt
+                let Hrgbuku = "1000"; 
+                let jumlah = 3
+                let total = parseInt(Hrgbuku) + jumlah // hasil akan 1003 karna nilai variable Hrgbuku diubah menjadi Number kemudian ditambahkan dengan jumlah
+
+                console.log(total);
+                //console.log(toString (Hrgbuku)); 
+
+                //parseFloat
+                let v = "3.3";
+                let b = 2
+
+                let c = parseFloat(v) + b
+                console.log(c);
+
+                // Number
+                let i = "3";
+                let o = "5";
+
+                let hs = Number(i) + Number(o) // hasil akan berupa penjulahan 3+5 karna type data sudah diubah ke number
+                console.log(hs);
+                
+                // .toString 
+
+                let ab = 20
+                let ac = 21 
+
+                let ad = ab.toString() + ac.toString() // hasil akan berupa type data string dan bukan hasil dari penjumlahan 
+                console.log(ad); 
+
+
+                // NaN (Not a Number) nilai khusus di JavaScript yang digunakan ketika hasil operasi bukan angka yang valid, walaupun tipe datanya tetap number.
+                // NaN yang dioperasikan dengan NaN akan menghasilkan NaN
+              
+                let usia = parseInt("lima");
+                console.log(usia); // akan muncul NaN karna data tidak valid karna bukan number 
+                // solusi 
+
+                if (Number.isNaN(usia)){ // isNaN digunakan untuk mengecek apakah type data Number 
+                  console.log("masukan angka!");
+                }
+
+                let ae = Number("wrong"); // NaN
+                let aw = 100 
+                let aq = ae + aw // Nan
+
+                console.log(ae + aw); // semua yang dioperasikan dengan NaN akan menghasilkan NaN
+
+
+
+
