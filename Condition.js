@@ -1,17 +1,3 @@
-/* 
-Step masukan ke git
-
-1. git add .
-2. git commit -m "add: new learning fundamental"
-3. git push origin dev
-
-untuk update 
-1. git add .
-2. git commit -m "update project"
-3. git push origin dev
-
-*/ 
-
 // if and else condition :
 
 let pen = 1000
@@ -87,3 +73,9 @@ let mobil = "fortuner";
 default:
     console.log ("ini bukan mobil");
   }
+
+// ternary  : versi singkat dari if else dalam 1 baris
+let  umur = 20
+let stat = umur >=18 ? "Dewasa" : "Anak";
+console.log(stat); // Dewasa
+
