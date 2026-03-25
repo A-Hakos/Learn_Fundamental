@@ -1,0 +1,82 @@
+## Shortcut VS Code Lengkap
+
+
+
+| Shortcut | Fungsi |
+|---|---|
+| `Ctrl + N` | File baru |
+| `Ctrl + O` | Buka file |
+| `Ctrl + S` | Simpan |
+| `Ctrl + Shift + S` | Simpan semua |
+| `Ctrl + W` | Tutup tab |
+| `Ctrl + Z` | Undo |
+| `Ctrl + Y` | Redo |
+
+---
+
+### 🔍 Pencarian
+
+| Shortcut | Fungsi |
+|---|---|
+| `Ctrl + F` | Cari di file |
+| `Ctrl + H` | Cari & ganti |
+| `Ctrl + Shift + F` | Cari di semua file |
+| `Ctrl + P` | Cari & buka file |
+| `Ctrl + Shift + P` | Command palette |
+
+---
+
+### ✏️ Edit Kode
+
+| Shortcut | Fungsi |
+|---|---|
+| `Alt + ↑ / ↓` | Pindah baris ke atas/bawah |
+| `Shift + Alt + ↑ / ↓` | Duplikat baris |
+| `Ctrl + Shift + K` | Hapus baris |
+| `Ctrl + /` | Comment / uncomment |
+| `Ctrl + D` | Pilih kemunculan berikutnya |
+| `Ctrl + F2` | Pilih semua kemunculan |
+| `F2` | Rename variabel/symbol |
+| `Tab` | Indent |
+| `Shift + Tab` | Unindent |
+
+---
+
+### 🖥️ Tampilan
+
+| Shortcut | Fungsi |
+|---|---|
+| `Ctrl + B` | Toggle sidebar |
+| `Ctrl + `` ` `` ` | Buka terminal |
+| `Ctrl + Shift + `` ` `` ` | Terminal baru |
+| `Ctrl + \` | Split editor |
+| `Ctrl + +` | Zoom in |
+| `Ctrl + -` | Zoom out |
+
+---
+
+### 🧭 Navigasi
+
+| Shortcut | Fungsi |
+|---|---|
+| `Ctrl + G` | Pergi ke baris tertentu |
+| `Ctrl + Click` | Pergi ke definisi |
+| `F12` | Go to definition |
+| `Alt + ←` | Kembali ke posisi sebelumnya |
+| `Ctrl + Tab` | Ganti tab |
+
+---
+
+### 💡 IntelliSense & Debug
+
+| Shortcut | Fungsi |
+|---|---|
+| `Ctrl + Space` | Trigger autocomplete |
+| `F5` | Jalankan / debug |
+| `F9` | Toggle breakpoint |
+| `F10` | Step over |
+| `F11` | Step into |
+
+---
+
+> **Tips:** Tekan `Ctrl + Shift + P` lalu ketik `keyboard shortcuts` untuk melihat dan mengubah semua shortcut sesuai kebutuhan kamu.

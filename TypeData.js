@@ -51,12 +51,12 @@ console.log("----------------- Object ---------------------")
 console.table(user);
 
 console.log("------------- Menghapus Object-------------------");
-delete user["umur"];
+delete user["umur"]; // menghapus
 console.table(user);
 
-
-// menghapus
-
+console.log("--------------Akses Property Object--------------");
+// console.info(`atribut : ${nama variabel.atribut}`)
+console.info(`nama : ${user.nama}`)
 
 // analogi sederhana Object untuk mendeskripsikan biodata seseorang
 
