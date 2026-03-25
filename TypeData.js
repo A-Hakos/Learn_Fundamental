@@ -39,14 +39,24 @@ console.log (null);
 let nilai; // undefined (tidak terdefisini) karena variable tidak tidak ada nilainya 
 console.log (nilai);
 
+console.log("----------------- Object ---------------------")
+
 /* Non Primitive (kompleks)
 1. Object : Digunakan untuk menyimpan data yang punya nama (key) 
-*/ let user = {
+*/ let user = { // menambah object
     nama : "Aditya Hakos",
     umur : 28,
     Login : true
 };
-console.log (user);
+console.table(user);
+
+console.log("------------- Menghapus Object-------------------");
+delete user["umur"];
+console.table(user);
+
+
+// menghapus
+
 
 // analogi sederhana Object untuk mendeskripsikan biodata seseorang
 

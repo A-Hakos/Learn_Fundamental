@@ -45,14 +45,13 @@ for (const key in siswa) {
 
 // break dan continue
 for (let i = 1; i <= 10; i++) {
-  if (i === 4) break;
+  if (i === 4) break; // digunakan untuk keluar dari loop, walaupun kondisi loop masih terpenuhi
   console.log(i);  // 1, 2, 3
 }
+console.log("------------------"); 
 
-/* Besok  
- continue — lewati iterasi ini, lanjut ke berikutnya
+// continue   lewati iterasi ini, lanjut ke berikutnya
 for (let i = 1; i <= 6; i++) {
-  if (i % 2 === 0) continue;
+  if (i % 2 === 1) continue;
   console.log(i);  // 1, 3, 5  (angka genap di-skip)
-}
-*/
+} 
