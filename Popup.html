@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Up</title>
+</head>
+<body>
+    <script>
+
+    // Alert : digunakan untuk memberikan Popup message pada browser
+        let nama = "adit";
+        alert("Halo " + nama); 
+
+        console.log("----------------------");
+    
+    //Prompt : digunakan untuk meminta user memberikan input
+        let umur = prompt("Berapa Usia Kamu?") 
+        if (umur === null) { // kondisi jika user klik cancel
+        alert("Kamu membatalkan input!");
+        } else if (umur < 18) {
+        alert("Kamu masih di bawah umur!");
+        } else {
+        alert("Kamu sudah dewasa!");
+        }
+    
+    // Confirm : digunakan untuk konfirmasi ke user
+    
+        let jawaban = confirm("Lanjut ?");
+
+        if (jawaban === true) { // bersifat boolean 
+        console.log("User menekan OK");
+        } else {
+        console.log("User menekan Cancel");
+        }
+        
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
