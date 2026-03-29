@@ -57,13 +57,14 @@ if (parfum !== "indo"){
 }
 
 // switch case condition : digunakan untuk membandingkan satu variabel dengan beberapa kemungkinan nilai.
+// kondisi di switch hanya untuk perbandingan == 
 
 let mobil = "fortuner";
 
   switch(mobil){
     case "hrv":
     console.log ("honda");
-    break;
+    break ;
     case "fortuner":
         console.log ("toyota");
     break;
@@ -74,8 +75,4 @@ default:
     console.log ("ini bukan mobil");
   }
 
-// ternary  : versi singkat dari if else dalam 1 baris
-let  umur = 20
-let stat = umur >=18 ? "Dewasa" : "Anak";
-console.log(stat); // Dewasa
 

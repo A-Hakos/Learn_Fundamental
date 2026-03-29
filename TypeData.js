@@ -31,13 +31,24 @@ if (Login) {
   console.log("User offline");
 }
 
+console.log("-----------------Null & Undefined -------------------");
+
 /*
 4. Null :  biasa digunakan sebagai sebuah variable yang akan memiliki isi tapi tidak untuk saat ini (menunggu data dari database)
 */ let Null = null;
 console.log (null);
 
-let nilai; // undefined (tidak terdefisini) karena variable tidak tidak ada nilainya 
-console.log (nilai);
+// 5. undefined : Variabel sudah dideklarasikan, tapi belum diberi nilai.
+
+/* let nilai;  
+console.log (nilai); // hasil akan undefined karna belum ada nilai pada variable
+ */
+let nilai;
+if (nilai === undefined ) {
+console.log("Undefined");
+} else {
+  console.log("Defined");
+}
 
 console.log("----------------- Object ---------------------")
 
@@ -60,6 +71,29 @@ console.info(`nama : ${user.nama}`)
 
 // analogi sederhana Object untuk mendeskripsikan biodata seseorang
 
+console.log("------------------------In Operator-----------------------");
+
+// In Operator = operator yang bisa dilakukan utk mengecek apakah sebuah property ada dalam object atau tidak
+// Jika Property ada dalam Object maka hasil true
+// Bisa digunakan untuk type data Array
+// In Operator hanya akan mengecek apkaah sebuah property atau index ada / tidak walaupun nilainya NULL /Undefined
+
+const person1 = {
+name1 : "Yanto",
+name2 : "Hakos"
+}
+const result = "name1" in person1;
+console.log(result);
+
+const person2 = {
+  name3 : undefined,
+  name4 : "Eva"
+}
+const result2 = "name3" in person2;
+console.log(result2); // hasil akan tetap true karna nilai pada name3 sudah ada walaupun undefined
+
+console.log("-------------------Array--------------------")
+
 /* 
 2. Array : bisa menyimpan lebih dari satu elemen 
 data dimulai dari hitungan 0,1,2,3,....,dst
@@ -81,59 +115,6 @@ console.table(mobil);
 // Cara menambahkan Data Array ke Index ke 0
 mobil.unshift("Mercy"); // digunakan untuk push data ke array index 0
 console.table(mobil);
-
-/* OPERATOR
-+ :	Untuk penambahan
-example : 
-*/ let x = 5;
-let y = 10;
-console.log(x+y);
-/*  
--	Subtraction : : digunakan untuk pengurangan 
-example : 
-*/ let q = 1;
-let w = 2;
-console.log(q-w);
-/* 
-*	Multiplication : Perkalian
-example : 
-*/ let e = 6;
-let r = 9.5;
-console.log(e*r);
-/* 
-**	Exponentiation : digunkan untuk perpangkatan
-example :
-*/ let t=3;
-let u=3;
-console.log(t**u);
-/* 
-/	Division : digunakan untuk pembagi 
-example : 
-*/ let a = 9;
-let m = 3;
-console.log(a/m);
-/*
-%	Modulus (Remainder) : akan menghasilkan sisa hasil pembagian dari dua angka
-example :
-*/ let f = 10;
-let h = 4;
-console.log(f%h);
-/* 
-++	Increment : digunakan untuk penambahan 1
-example : 
-*/ let motor = 1;
-  while (motor <= 3){
-  console.log(motor);
-  motor++;
-}
-/* 
---	Decrement : digunakan untuk pengurangan 1 
-example : 
-*/ let bakso=15;
-while (bakso>=10){
-  console.log(bakso);
-  bakso--;
-}
 
 // PREFIX DAN POSTFIX
 
@@ -220,7 +201,50 @@ console.log(fullname);
                 let aq = ae + aw // Nan
 
                 console.log(ae + aw); // semua yang dioperasikan dengan NaN akan menghasilkan NaN
+    
+  
+     /* Opertator TypeOf : merupakan opertator yang bisa kita gunakan untuk melihat tipe data sebuah value / variable 
+     
+     Untuk type data "Undefined" maka hasil operator typeof "Undefined"
+     Untuk type data "Null"  maka hasil operator typeof "Object"
+     Untuk type data "Boolean" maka hasil operator typeof "Boolean"
+     Untuk type data "Number" maka hasil operator typeof "Number"
+     Untuk type data "BitInt" maka hasil operator typeof "bigint"
+     Untuk type data "String" maka hasil operator typeof "string"
+     Untuk type data "Symbol" maka hasil operator typeof "symbol"
+     Untuk type data "Function" maka hasil operator typeof "object"
+     Untuk type data lain maka hasil operator typeog "object"
+     */
 
+     let data;
+     const typeData = typeof data;
+     console.log(typeData); // akan menghasilkan undefined karna nilai variable kosong
 
+     let data1 = 100
+     const typeData1 = typeof data1;
+     console.log(typeData1); // akan menghasilkan number karna variable yang dideklarasi berupa angka
+     
+    // ternary  : versi singkat dari if else dalam 1 baris
+    let  usia1 = 20
+    let stat = usia1 >=18 ? "Dewasa" : "Anak";
+    console.log(stat); // Dewasa
+
+console.log("---------- Nullish Coalesing---------")
+
+    // Nullish Coalesing Operator (??): adalah null dan undefined 
+
+   /*  let parameter;
+    let Bdata = parameter;
+    if (Bdata === undefined || data === null){
+      Bdata = "Nilai Default";
+    }
+    console.log(Bdata); */
+    
+    // jika menggunakan nullish coalesing 
+
+    let parameter;
+    let dataC = parameter ?? " Nilai Default";
+    console.log(dataC);
+    
 
 

@@ -64,4 +64,13 @@ let t = null;
 
 console.log (`Hasil T. Segitiga = ${t = (2 * L) / a}`);
 
+console.log("--------------------------------");
+/* Latihan Logic Javascript
 
+Pseudocode
+Deklarasikan variabel nama menggunakan let dengan nilai "Budi", dan variabel umur menggunakan const dengan nilai 20.
+ */ 
+
+let nama= "Budi";
+const umur = 20;
+console.log(nama + umur);
