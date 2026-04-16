@@ -1,6 +1,6 @@
 /* Github digunakan untuk penyimpanan (repository) coding
 operasional di Github :
-1. Menyimpang coding (Repository)
+1. Menyimpan coding (Repository)
 2. Version kontrol (Melacak perubahan kode dari waktu ke waktu, history editing)
 3. Kolaborasi tim
 4. Portofolio
