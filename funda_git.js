@@ -30,7 +30,7 @@ alur kerja di Github
     git add (nama file.txt,html,js,css)  < satu file
     git add . < semua file yang berubah
 5. Commit 
-     git commit -m "add: new learning fundamental"
+     git commit -m "Learn_Fundamental"
 6. Push
     git push origin main
 

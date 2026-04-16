@@ -157,3 +157,92 @@ sum("Apel", 12,11,23,14,21,55);
 
 const valuesum = [10,101,10,10];
 sum("Mangga", ...valuesum);
+
+// Function sbg Value
+// Function bisa disimpan didalam variable, bisa juga dikirim melalui parameter ke function lainnya
+
+function sayMor(name){
+    console.log(`Hello ${name}`)
+}
+sayMor("Vira");
+let say1 = sayMor; // deklarasi function menjadi sebuah variable
+
+console.log("====================");
+// Function digunakan sbg Parameter
+
+function Givename(callback) {
+    callback("Vira") // sayMor("Vira")
+}
+Givename(sayMor)
+Givename(say1)
+
+console.log("===================");
+
+// Anonymous Function atau function tanpa nama
+// kita bisa buat anonymous function dalam variable / bisa kita buat ketika mengisi parameter
+
+let says = function (name) { // anonymous dalam variable
+    console.log(`Hello ${name}`)
+}
+says ("hak")
+says ("per")
+
+function GiveaName (callbacks) { // anonymous dalam parameter
+    callbacks("Heru");
+}
+
+GiveaName(says);
+
+GiveaName(function(name){
+    console.log(`Yow, ${name}`);
+
+});
+
+// Function dalam Function (Inner Function)
+// tidak ada batasan dalam membuat function
+// hanya bisa diakses ditempat kita membuat function, tidak bisa diakses dari luar function
+
+function outer() {
+
+    function inner(){
+        console.log("Inner");
+    }
+    inner()
+    inner();
+}
+outer();
+// inner() Error karna tidak bisa diakses diluar dari function
+
+console.log("===========================");
+
+// Scope : area akses sebuah data 
+// setiap kita membuar function maka kita akan membuat local scope untuk function tsb
+// data di global scope bisa diakses dari local scope namun data di local scope hanya bisa diakses di local scope tsb atau discope local dibawahnya (function dalam function)
+
+// Global scope  
+let Cx = 0 
+
+function hit1(){ 
+    Cx++;
+}
+
+hit1();
+console.info(Cx);
+
+// Local Scope
+
+function first(){
+    // local scope first
+    let firstvar = "1st";
+}
+
+function second(){
+    // local scope second 
+    let secondvar = "2nd";
+}
+first();
+second();
+
+// console.log(firstvar); error karena variable ada didalam local scope
+// console.log(secondvar); error karna variable ada di dalam local scope
+
