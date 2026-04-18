@@ -246,3 +246,92 @@ second();
 // console.log(firstvar); error karena variable ada didalam local scope
 // console.log(secondvar); error karna variable ada di dalam local scope
 
+// Nested Function
+// innerfunction hanya bisa dipanggil dalam outer function
+// function inner tidak bisa dipakai dari luar 
+function outerFunction() { //function utama
+    console.log("Ini fungsi luar");
+
+    function innerFunction() { // nested function
+        console.log("Ini fungsi dalam");
+    }
+
+    innerFunction();
+}
+
+outerFunction();
+
+// Recursive Function : kemampuan function untuk memanggil function dirinya sendiri
+// Factorial Loop
+
+function factorial(valueA){
+    let result = 1;
+    for (let i = 1; i <= valueA; i++){
+        result *= i;
+    }
+    return result;
+}
+console.info(factorial(5));
+console.info(1*2*3*4*5);
+
+// Function factorial recursive
+function factorialRecursive(valueB){
+    if (valueB === 1) {
+        return 1;
+    } else {
+        return valueB * factorialRecursive (valueB - 1);
+    }
+}
+console.info(factorialRecursive(3));
+console.log("===========================");
+
+// Function Generator 
+// adalah function yang digunakan untuk membuat data generator
+// Generator adalah data yang bisa di iterasi spt array
+
+
+function* createName(name) {
+    yield "Hakos";
+    yield "P";
+    }
+
+    const names = createName();
+    for (const name of names) {
+        console.info(name);        
+    }
+
+function* buatGanjil(valueC){ // deklarasi menggunakan *
+    for (let a = 1; a <= valueC; a ++){
+        if (a % 2 === 1) {
+            yield a;
+        }
+    }
+}
+const numbers = buatGanjil(20);
+for (const number of numbers){
+    console.info(number);
+}
+
+// Arrow Function 
+// adalah alternaltif pembuatan function yang lebih sederhana dr function biasanya 
+// terdapat limitasi dan tidak bisa digunakan untuk semua situasi
+// menggunakan tanda =>
+// harus disimpan dalam variable
+// tidak ada argument object
+// tidak bisa menggunakan function generato
+
+const sayA = (named) => {
+    const sayX = `Hello ${named}`;
+    console.info(sayX)
+}
+sayA(`Hakos`);
+
+// Arrow Function tanpa block
+// digunakan untuk function dmn hanya 1 baris
+// tidak perlu menggunakan return
+
+const sayB = (named) => console.info(`Hello ${named}`);
+sayB(`Adit`);
+
+const total = (pertama, kedua) => pertama + kedua;
+console.log(total(12, 12));
