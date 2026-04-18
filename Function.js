@@ -335,3 +335,74 @@ sayB(`Adit`);
 
 const total = (pertama, kedua) => pertama + kedua;
 console.log(total(12, 12));
+
+//  Arrow Function sbg Parameter
+
+/* setTimeout(() => { // digunakan untuk set time 
+    console.log("Dijalankan setelah 1 detik");
+}, 100); // 1000 ms satuan yang digunakan = 1 detik
+ */
+// Closure
+// adalah function yang mengingat variable dari luar scopenya
+
+function createUser() {
+    let password = "12345";
+
+    return {
+        checkPassword: function(input) {
+            return input === password;
+        }
+    };
+}
+
+const user = createUser();
+
+console.log(user.checkPassword("12345")); // true
+
+// Object Method 
+// Object method adalah function yang menjadi properti di dalam object. Jadi object tidak hanya menyimpan data, tapi juga perilaku (behavior).
+
+
+const person = {
+    name: "anji",
+    sayHello: function (name){
+        console.log(`Hello ${name}`);
+    }
+};
+person.sayHello(`heru`); 
+
+// Menambah Method ke Object
+
+const person1 = {
+    name: "bimo"
+};
+
+person1.sayHi = function (name1){
+    console.log(`Hello ${name1}`);
+}
+person1.sayHi(`Tatang`);
+
+console.log("=====================")
+
+
+// Kata kunci this
+/* Kata kunci this di JavaScript digunakan untuk mereferensikan object yang sedang menjalankan kode.
+Tapi hati-hati: nilai this itu tidak tetap, dia tergantung bagaimana function dipanggil, bukan di mana dia ditulis. */
+
+// this di function global
+/* function test(){
+    console.log(this);
+}
+test(); // hasilnya akan windows jika di coba di browser
+ */
+
+// This di Object Method
+const orang = {
+    name : "Jog",
+    sayHello(){
+        console.log(`Hello ${this.name}`); 
+    }
+};
+orang.sayHello();
+// this = orang
+// jadi this.name = "Jog"
