@@ -48,12 +48,10 @@ console.log("----------------------");
 Secara default function tidak menghasilkan value tapi kita bisa membuat function mengembalikan value dengan menggunakan kata kunci return dalam function
 di*/
 
-
-
 function persegi(sisi){
     return sisi * sisi;
 }
-console.log(persegi(5));
+console.log(`Persegi ` + persegi(5));
 /*  nama function : persegi
 nama parameter : sisi
 parameter adalah variable yang exist dalam sebuah function
