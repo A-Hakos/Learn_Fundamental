@@ -1,4 +1,4 @@
-// Latihan function
+// Latihan function 20 Apr
 // Function dasar
 
 //Buat function bernama sapa yang menampilkan teks:
@@ -13,6 +13,20 @@ function SayHello2(name){
 }
 SayHello2("Hakos");
 
+/* Buat function salam(waktu = "pagi") */
+function salam (waktu = "pagi"){
+    return (`Selamat ${waktu}`);
+}
+console.log(salam()); // selamat pagi
+console.log(salam("Malam")); // selamat malam
+
+//arrow function
+const salam1 = (waktu = "pagi") => `Selamat ${waktu}`;
+console.log(salam());
+
+const greetings = (time = "morning") => `Good ${time}`;
+console.log(greetings());
+
 // Buat function tambah yang menerima 2 angka dan menampilkan hasil penjumlahan.
 function Penjumlahan(x,y){
     const z = x + y
@@ -26,6 +40,8 @@ function Perkalian (a,b,c){
     console.log(`${a} kali ${b} kali ${c} = ${d}`);
 }
 Perkalian (2,2,3);
+
+
 
 /* Buat function cekGenap yang menerima angka, lalu:
 Jika genap → tampilkan "Genap"
@@ -103,3 +119,94 @@ console.log(max(10,20));
 // bentuk arrow function 
 const max1 = (ab1, ac1) => ab1 > ac1 ? ab1 : ac1;
 console.log(max1(30,20));
+
+console.log("----------------- 21 April 2026 ---------------------");
+
+// Latihan fundamental 25 Apr
+
+//Buat function halo() yang menampilkan teks:
+function Halo(txt){
+    console.log(`Halo ${txt}`)
+}
+Halo(`Dunia`)
+
+// Buat function sapa(nama
+function sapa(name){
+    console.log(`Malam ${name}`)
+}
+sapa(`Hakos`)
+
+// Buat function tambah(a, b)
+function tambah(a1,b1){
+    const c1 = a1 + b1
+    console.log(`${a1}` + ` ditambah ` + `${b1}` + ` = ` + `${c1}`)
+}
+tambah(2,2)
+
+// Buat function kurang(a, b)
+
+function kurang (a1, b1){
+    const c2 = a1 - b1
+    console.log(`${a1}` + ` dikurang ` + `${b1}` + ` = ` + `${c2}`)
+}
+kurang(3,1)
+
+/* Buat function cekPositif(angka):
+return "Positif" jika angka > 0
+return "Negatif" jika angka < 0
+return "Nol" jika angka = 0 */
+
+function cek(number){
+    if(number > 0){
+        console.log(`positif`);
+    } else if (number < 0){
+        console.log(`negatif`);
+    } else if (number == 0) {
+        console.log(`Nol`);
+    } else {
+        console.log(`bukan angka`)
+    }
+}
+cek(17)
+
+// Buat function luasLingkaran(r) (gunakan π = 3.14).
+
+function luasLingkaran(r){
+    return(3.14 * r * r)
+}
+console.log(luasLingkaran(10))
+
+/*  Buat function cekUmur(umur):
+ return "Dewasa" jika ≥ 18
+return "Anak-anak" jika < 18 */
+
+function cekUmur(umur){
+    if (umur >= 18) {
+        return(`Dewasa`)
+    } else {
+        return (`Anak`)
+    }
+}
+console.log(cekUmur(71))
+
+function cekUmurfix(umurfix){
+    return umurfix >= 18 ? "Dewasa" : "Anak";
+}
+console.log(cekUmurfix(6))
+
+
+// Buat function panjangString(str) yang mengembalikan panjang string.
+function panjangString(str) {
+    return str.length;
+}
+console.log(panjangString(`Hakos`)) // hasilnya berupa number dari jumlah karakter string 
+
+// Buat function totalArray(arr) yang menjumlahkan semua isi array.
+function totalArray(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  return total;
+}
+console.log(totalArray([21,22,23]))
