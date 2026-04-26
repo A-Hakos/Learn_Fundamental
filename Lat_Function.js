@@ -210,3 +210,131 @@ function totalArray(arr) {
   return total;
 }
 console.log(totalArray([21,22,23]))
+
+// Buat sebuah function sapa yang menerima parameter nama, lalu tampilkan. Kemudian buat function proses yang menerima callback, dan panggil callback tersebut dengan nama "Adit".
+function halo(Nama){
+    console.log(`Halo ${Nama}`);
+}
+function prosesUser (callback){
+    const Nama = "Hakos";
+    callback(Nama); // memanggil callback
+}
+prosesUser(halo)
+
+/* Buat function hitung(z1, x1, callback) yang:
+menerima 2 angka
+menerima callback
+callback digunakan untuk mengolah hasil penjumlahan a + b*/
+
+function result(z1,x1, callback){
+    const hasil = z1 + x1;
+    callback(hasil);
+}
+result(5,2, function(hasil){
+    console.log(hasil);
+});
+
+/* function pengali(y1,y2, callback){
+    const hasil1 = y1 * y2
+    callback(hasil1);
+}
+pengali(2,2, function(hasil1){
+    console.log(hasil1);
+});
+ */
+// arrow function 
+const pengali = (y1,y2, callback) => callback(y1 * y2);
+pengali (2,2, (hasil1) => console.log(hasil1));
+
+// function login 
+function login(username, password, successCallback, errorCallback){
+    if (username === "Adit" && password === "Hasky") {
+        successCallback();
+    } else {
+        errorCallback();
+    }
+}
+login(
+    "Adit", "Hasky", 
+    () => console.log("Login Sukses"),
+    () => console.log("Login Failed")
+);
+
+// Validasi email
+// cek apakah email mengandung @ dan .
+// return true atau false
+
+function validasiEmail(email, trueCallback, falseCallback) {
+    if (email.includes("@") && email.includes(".")) {
+        trueCallback();
+    }else {
+        falseCallback();
+    }
+}
+validasiEmail(
+    "aditya@gmail.com",
+    () => console.log("True"),
+    () => console.log("False")
+);
+
+// Buat function validasiPassword(password)
+// jika panjang password ≥ 6 → "Valid"
+// selain itu → "Tidak valid"
+
+function validasiPassword(pass, trueCallback, falseCallback){
+    if (pass.length >= 6){
+        trueCallback();
+    } else {
+        falseCallback();
+    }
+} 
+validasiPassword(
+    "lontongopor",
+    () => console.log("True"),
+    () => console.log("False")
+);
+
+console.log("---------------------------------");
+
+/*  Validasi pass kompleks
+Password harus:
+minimal 8 karakter , ada huruf kecil , ada huruf besar
+ada angka , ada simbol (!@#$%^&*) , tidak boleh ada spasi */
+
+/* function validasipass(passw, sukses, error){
+    if (passw.length < 8) return error("Min 8 Karakter");
+    if (passw.includes(" ")) return error("Tidak boleh spasi");
+    if (!/[a-z]/.test(passw)) return error("Tidak ada huruf kecil");
+    if (!/[A-Z]/.test(passw)) return error("Tidak ada huruf besar");
+    if (!/[0-9]/.test(passw)) return error("Tidak ada angka");
+    if (!/[!@#$%^&*]/.test(passw)) return error("Tidak ada simbol");
+
+    sukses("Password sudah sesuai");
+}
+validasipass(
+    "Adittttt",
+    (msg) => console.log("Sukses : ", msg),
+    (err) => console.log("Error : ", err)
+); */
+
+function validasiPassword(password, success, error) {
+  const errors = [];
+
+  if (password.length < 8) errors.push("Minimal 8 karakter");
+  if (password.includes(" ")) errors.push("Tidak boleh ada spasi");
+  if (!/[a-z]/.test(password)) errors.push("Tidak ada huruf kecil");
+  if (!/[A-Z]/.test(password)) errors.push("Tidak ada huruf besar");
+  if (!/[0-9]/.test(password)) errors.push("Tidak ada angka");
+  if (!/[!@#$%^&*]/.test(password)) errors.push("Tidak ada simbol");
+
+  if (errors.length > 0) {
+    error(errors);
+  } else {
+    success("Password sesuai");
+  }
+}
+validasiPassword(
+  "@Adit1245",
+  (msg) => console.log("Sukses:", msg),
+  (errs) => console.log("Error:", errs)
+);
