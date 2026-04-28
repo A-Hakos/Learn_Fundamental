@@ -338,3 +338,57 @@ validasiPassword(
   (msg) => console.log("Sukses:", msg),
   (errs) => console.log("Error:", errs)
 );
+
+console.log("============= 28 April ============")
+
+/* Buat function validasiPinjaman(gaji, cicilan)
+ika cicilan > 30% dari gaji → return "Ditolak"
+Jika tidak → return "Disetujui" */
+
+function validasiPinjaman(gaji,cicilan) {
+    if (cicilan > 30% gaji) {
+        console.log("cicilan ditolak")
+    } else {
+        console.log("diterima");
+    }
+}
+validasiPinjaman(1000000, 2000000)
+
+/* Buat function hitungGaji(gajiPokok, lemburJam)
+Lembur dibayar Rp50.000/jam
+Return total gaji */
+
+function hitungGaji (gajiPokok,lemburJam) {
+    const upahLembur = 50000;
+    const totalLembur = lemburJam * upahLembur;
+    return gajiPokok + totalLembur; 
+}
+console.log(hitungGaji(1000000, 8));
+
+/* Buat function hitungOngkir(jarak)
+0–5 km = Rp10.000
+5 km = Rp10.000 + Rp2.000/km berikutnya */
+
+function hitungOngkir(jarak){
+    if (jarak <= 5) {
+        return 10000;
+    } else {
+        const tambahan = jarak - 5; // dikurang 5 karna 5 km diawal tarif normal
+        return 10000 + (tambahan * 2000);
+    }
+}
+console.log(hitungOngkir()) 
+
+/* Buat function cekStok(stok, permintaan)
+Jika stok cukup → "Diproses"
+Jika tidak → "Stok tidak cukup" */
+
+function cekStok(stok, permintaan){
+    if (stok <= permintaan){
+        return ("Stok tidak cukup");
+    } else {
+        return ("diproses");
+    }
+}
+console.log(cekStok(10, 5));
+console.log(cekStok(5, 7));
