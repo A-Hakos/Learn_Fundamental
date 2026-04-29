@@ -392,3 +392,80 @@ function cekStok(stok, permintaan){
 }
 console.log(cekStok(10, 5));
 console.log(cekStok(5, 7));
+
+console.log("============= 29 Apr =============");
+
+// 29 Apr arrow function 
+
+/* Sebuah platform seperti Tokopedia ingin menghitung total harga setelah diskon. 
+Gunakan arrow function untuk:
+Menghitung harga setelah diskon tiap produk
+Menghasilkan array baru berisi { name, finalPrice }*/
+
+const product = [
+{ name : "Laptop" , price : 10000000, discount : 0.1},
+{ name : "monitor" , price : 1000000, discount : 0.05},
+{ name : "Mouse" , price : 100000, discount : 0.08},
+];
+const results = product.map(product => ({
+    name : product.name, 
+    finalPrice : product.price - (product.price * product.discount)
+}));
+console.log(results);
+
+/* Filter Transsaksi suspicious
+Soal:
+Gunakan arrow function untuk:
+Memfilter transaksi dengan nominal > 1 juta
+Output array baru berisi transaksi mencurigakan*/
+
+const transactions = [
+  { id: 1, amount: 50000 },
+  { id: 2, amount: 1500000 },
+  { id: 3, amount: 75000 },
+  { id: 4, amount: 2500000 }
+];
+const suspicious = transactions.filter( // t = nama parameter dalam function arrow 
+    t => t.amount > 1000000
+);
+console.log(suspicious);
+
+/* Analisa Gaji
+Gunakan arrow function untuk menghitung rata2 gaji karyawan */
+
+const karyawan = [
+    {nama : "Adit", salary : 10000000},
+    {nama : "Hakos", salary : 20000000},
+    {nama : "Per", salary : 20000000},
+];
+const avgSalary = karyawan.reduce(
+    (total, krywn) => total + krywn.salary, 0
+) / karyawan.length;
+console.log(avgSalary);
+
+// Mencari pengiriman tercepat
+// Gunakan arrow function untuk menentukan shipment dengan durasi yang paling cepat
+
+const shipment = [
+    { id : 1, duration : 3},
+    { id : 2, duration : 4},
+    { id : 3, duration : 2},
+];
+const fastest = shipment.reduce(
+    (prev, curr) => (curr.duration < prev.duration ? curr : prev)
+);
+console.log(fastest);
+
+// format data user
+// gunakan arrow function mengubah nama menjadi Capitalize
+
+const users = [
+    {fName : "aditya", lName : "hakos"},
+    {fName : "shavira", lName : "loren"},
+];
+const formated = users.map(user => {
+    const Caps = str => str.charAt(0).toUpperCase() + str.slice(1);
+
+    return `${Caps(user.fName)} ${Caps(user.lName)}`;
+});
+console.log(formated);
